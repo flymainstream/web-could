@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <artifactId>web-could</artifactId>
+
+
+    <groupId>com.js.couldPersonal</groupId>
+    <modelVersion>4.0.0</modelVersion>
+    <version>0.0.1</version>
+    <name>web-could</name>
+    <modules>
+        <module>could-api</module>
+        <module>could-gateway</module>
+        <module>could-service</module>
+        <module>could-utils</module>
+        <module>could-web</module>
+<!--        <module>code-recorder</module>-->
+    </modules>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.2.10.RELEASE</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+    <description>could project with Spring Boot</description>
+    <packaging>pom</packaging>
+    <properties>
+        <java.version>1.8</java.version>
+        <log4j.version>2.17.1</log4j.version>
+        <spring-cloud-alibaba.version>2.2.1.RELEASE</spring-cloud-alibaba.version>
+        <toolsLibary.version>1.0</toolsLibary.version>
+        <could-service-dependency.version>0.0.1</could-service-dependency.version>
+        <could-service-common.version>0.0.1</could-service-common.version>
+        <rados.version>0.6.0</rados.version>
+        <libcephfs.version>0.80.5</libcephfs.version>
+        <could-file-api.version>0.0.1</could-file-api.version>
+        <could-goods-api.version>0.0.1</could-goods-api.version>
+    </properties>
+
+    <dependencies>
+        <!--方便创建javaBean的一些方法-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <!--测试-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.junit.vintage</groupId>
+                    <artifactId>junit-vintage-engine</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+    </dependencies>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>${spring-cloud-alibaba.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+
+
+</project>
