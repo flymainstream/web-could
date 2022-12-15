@@ -1,0 +1,28 @@
+
+1. 新增分类查询 已存在分类表 category
+
+2. 新增品牌查询 已存在品牌表 brand
+
+3. 品牌与分类关联表  category_brand
+
+4. 新增属性查询  sku_attribute
+
+5. 新增分类与属性关联表 category_attr
+
+6. 门户->广告推荐 门户需要搭建多级缓存架构 暂定为(nginx and redis) 设计算法将调用次数多的数据 优先存入redis
+
+
+
+
+
+
+
+
+
+自卫 Or 流浪
+
+episode 1 高中生因为父母因素 算作 Ma Ge 党成员
+user : 去其他地方 yes or no
+yes : 枪机他人 获得名利 还清税务
+no : 税务官没收房产 被迫零元购
+

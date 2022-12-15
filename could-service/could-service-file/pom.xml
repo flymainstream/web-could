@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>could-service</artifactId>
+        <groupId>com.js.couldPersonal</groupId>
+        <version>0.0.1</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>could-service-file</artifactId>
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+
+    </properties>
+
+    <description>
+        microService for file
+    </description>
+
+    <dependencies>
+        <!-- Rados Java Api依赖 -->
+        <dependency>
+            <groupId>com.ceph</groupId>
+            <artifactId>rados</artifactId>
+<!--            <version>${rados.version}</version>-->
+            <version>0.6.0</version>
+        </dependency>
+        <!-- Cephfs 文件系统依赖 -->
+        <dependency>
+            <groupId>com.ceph</groupId>
+            <artifactId>libcephfs</artifactId>
+<!--            <version>${libcephfs.version}</version>-->
+            <version>0.80.5</version>
+        </dependency>
+        <!--swift-->
+        <dependency>
+            <groupId>org.javaswift</groupId>
+            <artifactId>joss</artifactId>
+            <version>0.10.2</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.js.couldPersonal</groupId>
+            <artifactId>could-file-api</artifactId>
+            <version>${could-file-api.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.js.tool</groupId>
+            <artifactId>ToolsLibary</artifactId>
+            <version>${toolsLibary.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <excludes>
+                        <exclude>
+                            <groupId>org.springframework.boot</groupId>
+                            <artifactId>spring-boot-configuration-processor</artifactId>
+                        </exclude>
+                    </excludes>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

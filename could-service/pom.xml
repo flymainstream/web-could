@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <artifactId>could-service</artifactId>
+
+    <parent>
+        <artifactId>web-could</artifactId>
+        <groupId>com.js.couldPersonal</groupId>
+        <version>0.0.1</version>
+    </parent>
+    <packaging>pom</packaging>
+    <modelVersion>4.0.0</modelVersion>
+    <modules>
+        <module>could-service-goods</module>
+        <module>could-service-file</module>
+    </modules>
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+   </properties>
+    <description>
+        the Microservice parent project
+    </description>
+    <dependencies>
+        <dependency>
+            <groupId>com.js.couldPersonal</groupId>
+            <artifactId>could-service-dependency</artifactId>
+            <version>${could-service-dependency.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.js.couldPersonal</groupId>
+            <artifactId>could-service-common</artifactId>
+            <version>${could-service-common.version}</version>
+        </dependency>
+    </dependencies>
+</project>
